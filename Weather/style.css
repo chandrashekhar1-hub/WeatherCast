@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, midnightblue, steelblue);
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 800px;
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    backdrop-filter: blur(15px);
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: lightblue;
+    margin-bottom: 30px;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    background: dodgerblue;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: royalblue;
+}
+
+#suggestions {
+    position: absolute;
+    width: 100%;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+    z-index: 100;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.suggestion {
+    padding: 15px;
+    border-bottom: 1px solid lightgray;
+    cursor: pointer;
+}
+
+.suggestion:hover {
+    background: lightblue;
+}
+
+#status {
+    font-size: 13px;
+    color: lightcyan;
+}
+
+#weather {
+    padding: 20px 0;
+}
+
+.weather-icon {
+    font-size: 85px;
+}
+
+.temperature {
+    font-size: 70px;
+    margin: 10px;
+}
+
+.condition {
+    font-size: 20px;
+    color: lightcyan;
+}
+
+.details {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.info {
+    flex: 1;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+}
+
+.info h3 {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+#forecast {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.day {
+    flex: 1;
+    min-width: 105px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.day:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.day-icon {
+    font-size: 35px;
+    margin: 15px 0;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 13px;
+    color: lightblue;
+}
+
+footer a {
+    color: white;
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 15px;
+    }
+
+    .details {
+        flex-wrap: wrap;
+    }
+
+    button {
+        padding: 12px;
+    }
+}
